@@ -1,0 +1,38 @@
+{
+  "name": "ServerEntry",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "port": {
+      "type": "number",
+      "default": 25565
+    },
+    "icon_url": {
+      "type": "string"
+    },
+    "is_online": {
+      "type": "boolean",
+      "default": false
+    },
+    "players_online": {
+      "type": "number",
+      "default": 0
+    },
+    "max_players": {
+      "type": "number",
+      "default": 20
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "address"
+  ]
+}

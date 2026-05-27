@@ -1,0 +1,70 @@
+{
+  "name": "Instance",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Instance name"
+    },
+    "minecraft_version": {
+      "type": "string",
+      "description": "Minecraft version"
+    },
+    "mod_loader": {
+      "type": "string",
+      "enum": [
+        "vanilla",
+        "forge",
+        "fabric",
+        "neoforge",
+        "quilt"
+      ],
+      "default": "vanilla"
+    },
+    "mod_loader_version": {
+      "type": "string",
+      "description": "Mod loader version"
+    },
+    "description": {
+      "type": "string"
+    },
+    "icon_url": {
+      "type": "string"
+    },
+    "last_played": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "play_time_minutes": {
+      "type": "number",
+      "default": 0
+    },
+    "mods": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "enabled": {
+            "type": "boolean"
+          },
+          "source": {
+            "type": "string"
+          },
+          "has_update": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "name",
+    "minecraft_version"
+  ]
+}
